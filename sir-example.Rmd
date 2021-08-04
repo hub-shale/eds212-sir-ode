@@ -64,7 +64,9 @@ approx_long <- approx_df %>%
 ## Plot the output with ggplot:
 ```{r}
 ggplot(data = approx_long, aes(x = time, y = proportion)) +
-  geom_line(aes(color = population))
+  geom_line(aes(color = population)) +
+  scale_color_discrete(labels = c("Infected", "Recovered", "Susceptible"))
+
 ```
 
 ## End
